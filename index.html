@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainingsplan Webanwendung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Trainingsplan zum Muskelaufbau</h1>
+
+    <!-- Tab-Leiste -->
+    <div class="tabs">
+        <button class="tab-button active" onclick="showDay(1)">Tag 1</button>
+        <button class="tab-button" onclick="showDay(2)">Tag 2</button>
+        <button class="tab-button" onclick="showDay(3)">Tag 3</button>
+    </div>
+
+    <!-- Tag 1: Brust, Schultern, Trizeps -->
+    <div class="training-day" id="day-1">
+        <h2>Tag 1 – Brust, Schultern, Trizeps</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Übung</th>
+                    <th>Sätze</th>
+                    <th>Wiederholungen</th>
+                    <th>Gewicht</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Bankdrücken (Langhantel)</td>
+                    <td>4</td>
+                    <td>8-10</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Schrägbankdrücken (Kurzhantel)</td>
+                    <td>3</td>
+                    <td>8-10</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Schulterdrücken (Kurzhantel)</td>
+                    <td>4</td>
+                    <td>10-12</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Seitheben</td>
+                    <td>3</td>
+                    <td>12-15</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Trizepsdrücken (Kabel)</td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Overhead Trizepsdrücken (Kurzhantel)</td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tag 2: Rücken, Bizeps, Bauch -->
+    <div class="training-day" id="day-2" style="display:none;">
+        <h2>Tag 2 – Rücken, Bizeps, Bauch</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Übung</th>
+                    <th>Sätze</th>
+                    <th>Wiederholungen</th>
+                    <th>Gewicht</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Klimmzüge</td>
+                    <td>4</td>
+                    <td>6-8</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Latziehen (Kabel)</td>
+                    <td>3</td>
+                    <td>8-10</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Rudern (Langhantel)</td>
+                    <td>4</td>
+                    <td>8-10</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Rudern (Kabel)</td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Bizepscurls (Langhantel)</td>
+                    <td>4</td>
+                    <td>8-10</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Hammer Curls (Kurzhantel)</td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Crunches</td>
+                    <td>3</td>
+                    <td>15-20</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Beinheben</td>
+                    <td>3</td>
+                    <td>12-15</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tag 3: Beine, Waden, Bauch -->
+    <div class="training-day" id="day-3" style="display:none;">
+        <h2>Tag 3 – Beine, Waden, Bauch</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Übung</th>
+                    <th>Sätze</th>
+                    <th>Wiederholungen</th>
+                    <th>Gewicht</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Kniebeugen (Langhantel)</td>
+                    <td>4</td>
+                    <td>8-10</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Beinpresse</td>
+                    <td>4</td>
+                    <td>10-12</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Ausfallschritte (Kurzhantel)</td>
+                    <td>3</td>
+                    <td>12-15</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Beinstrecker</td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Beinbeuger</td>
+                    <td>3</td>
+                    <td>10-12</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Wadenheben (stehend)</td>
+                    <td>4</td>
+                    <td>12-15</td>
+                    <td><input type="text" placeholder="Gewicht"></td>
+                </tr>
+                <tr>
+                    <td>Crunches</td>
+                    <td>3</td>
+                    <td>15-20</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td>Plank</td>
+                    <td>3</td>
+                    <td>60 Sekunden</td>
+                    <td>-</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
