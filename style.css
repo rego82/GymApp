@@ -1,3 +1,4 @@
+/* Global styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
@@ -10,7 +11,7 @@ h1, h2 {
 }
 
 table {
-    width: 100%;
+    width: 100%; /* Setze die Breite auf 100% für mobile Geräte */
     border-collapse: collapse;
     margin: 20px 0;
 }
@@ -25,23 +26,20 @@ th {
     background-color: #f8f8f8;
 }
 
+/* Input fields should take up 100% of available space */
 input[type="text"] {
-    width: 100%;
-    padding: 5px;
+    width: 100%; 
+    padding: 8px;
     margin: 5px 0;
+    box-sizing: border-box;
 }
 
-.training-day {
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-}
-
+/* Tabs section */
 .tabs {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
 }
 
 .tab-button {
@@ -52,9 +50,51 @@ input[type="text"] {
     cursor: pointer;
     border-radius: 5px;
     font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .tab-button.active {
     background-color: #ddd;
     font-weight: bold;
+}
+
+/* Card style for training day content */
+.training-day {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    h1, h2 {
+        font-size: 1.5em; /* Reduce the font size on smaller screens */
+    }
+
+    table, th, td {
+        font-size: 0.9em; /* Slightly smaller font for mobile */
+    }
+
+    .tab-button {
+        padding: 10px 15px; /* Reduce padding for smaller screens */
+        font-size: 14px;
+    }
+}
+
+/* For even smaller screens, like iPhones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px; /* Less padding on small devices */
+    }
+
+    table, th, td {
+        font-size: 0.8em; /* Reduce font size further */
+        padding: 8px; /* Less padding in cells */
+    }
+
+    .tab-button {
+        padding: 8px 10px; /* Adjust padding on small buttons */
+        font-size: 12px;
+    }
 }
